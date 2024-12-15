@@ -21,86 +21,25 @@
 - **Git**
 - **Graphviz**
 
-## Установка
 
-### 1. Установка Python 3
-
-Скачайте и установите Python 3 с [официального сайта Python](https://www.python.org/downloads/).
-
-### 2. Установка Git
-
-Скачайте и установите Git с [официального сайта Git](https://git-scm.com/downloads).
-
-### 3. Установка Graphviz
-
-**Для Windows:**
+### Установка Graphviz
 
 1. Скачайте установщик Graphviz с [официального сайта Graphviz](https://graphviz.org/download/).
 2. Установите Graphviz, следуя инструкциям установщика.
 3. Добавьте путь к `dot.exe` (например, `C:\Program Files\Graphviz\bin`) в переменную окружения `PATH`.
 
-**Для macOS:**
 
-Используйте Homebrew для установки Graphviz:
 
-```bash
-brew install graphviz
-```
-
-**Для Linux (Debian/Ubuntu):**
-
-```bash
-sudo apt-get update
-sudo apt-get install graphviz
-```
-
-### 4. Клонирование Репозитория
-
-Склонируйте этот репозиторий на ваш локальный компьютер:
-
-```bash
-git clone https://github.com/ваш-пользователь/визуализатор-графа-зависимостей.git
-cd визуализатор-графа-зависимостей
-```
-
-### 5. Установка Зависимостей
+###  Установка Зависимостей
 
 Для данного инструмента не требуется установка дополнительных Python-библиотек, так как используются стандартные библиотеки Python. Однако, рекомендуется использовать виртуальное окружение:
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # Для Unix или macOS
 venv\Scripts\activate     # Для Windows
 ```
 
-## Использование
-
-### Синтаксис Команды
-
-```bash
-python3 visualize_deps.py --graphviz-path <ПУТЬ_К_dot> --repo-path <ПУТЬ_К_РЕПО>
-```
-
-### Параметры
-
-- `--graphviz-path`: Полный путь к исполняемому файлу `dot` из Graphviz.
-- `--repo-path`: Полный путь к Git-репозиторию, для которого необходимо построить граф зависимостей.
-
-### Примеры
-
-**Пример 1: Использование полного пути к `dot`**
-
-```bash
-python3 visualize_deps.py --graphviz-path /usr/bin/dot --repo-path /home/user/my_git_repo
-```
-
-**Пример 2: Если `dot` добавлен в переменную PATH**
-
-```bash
-python3 visualize_deps.py --graphviz-path dot --repo-path /home/user/my_git_repo
-```
-
-**Пример 3: Для Windows**
+**Пример**
 
 ```bash
 python visualize_deps.py --graphviz-path "C:\Program Files\Graphviz\bin\dot.exe" --repo-path "C:\Projects\sample_git_repo"
