@@ -200,3 +200,9 @@ abcdef0 Initial commit: Add project structure with src and docs directories
   - `src/main.py` → `src`
   - `src/utils.py` → `src`
   - `src/goodbye.py` → `src`
+
+### Клонирование тестового репозитория
+
+```
+git clone https://github.com/DJS0FT/CONFIG_HW2TEST
+```
